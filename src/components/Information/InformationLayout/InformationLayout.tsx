@@ -1,7 +1,9 @@
 import { useAppSelector } from '../../../hooks/hooks.ts';
 
 export const InformationLayout: React.FC = () => {
-	const { isDraw, isGameEnded, currentPlayer } = useAppSelector((state) => state);
+	const isDraw = useAppSelector((state) => state.isDraw);
+	const isGameEnded = useAppSelector((state) => state.isGameEnded);
+	const currentPlayer = useAppSelector((state) => state.currentPlayer);
 
 	return (
 		<>

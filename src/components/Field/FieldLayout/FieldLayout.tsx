@@ -3,7 +3,8 @@ import styles from './field.layout.module.css';
 import { useAppSelector } from '../../../hooks/hooks.ts';
 
 export const FieldLayout: React.FC<IFieldLayoutProps> = ({ clickHandler }) => {
-	const { field, isGameEnded } = useAppSelector((state) => state);
+	const field = useAppSelector((state) => state.field);
+	const isGameEnded = useAppSelector((state) => state.isGameEnded);
 
 	return (
 		<>

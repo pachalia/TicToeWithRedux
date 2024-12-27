@@ -7,7 +7,9 @@ export type player = 'X' | '0';
 export type field = player | '';
 
 export const Game: React.FC = () => {
-	const { currentPlayer, isGameEnded, field } = useAppSelector((state) => state);
+	const currentPlayer = useAppSelector((state) => state.currentPlayer);
+	const isGameEnded = useAppSelector((state) => state.isGameEnded);
+	const field = useAppSelector((state) => state.field);
 	const dispatch = useAppDispatch();
 
 	useEffect(() => {
